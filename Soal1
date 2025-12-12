@@ -1,0 +1,78 @@
+package PrakPBO;
+
+class Hewan {
+    private String nama;
+    private int jumlahKaki;
+    
+    public Hewan(String nama, int jumlahKaki) {
+        this.nama = nama;
+        this.jumlahKaki = jumlahKaki;
+    }
+    
+    public void bergerak() {
+        System.out.println(nama + " bergerak dengan " + jumlahKaki + " kaki");
+    }
+    
+    public String getNama() {
+        return nama;
+    }
+}
+
+class HewanBerkakiDua extends Hewan {
+    public HewanBerkakiDua(String nama) {
+        super(nama, 2);
+    }
+}
+
+class HewanBerkakiEmpat extends Hewan {
+    public HewanBerkakiEmpat(String nama) {
+        super(nama, 4);
+    }
+}
+
+class HewanBerkakiEnam extends Hewan {
+    public HewanBerkakiEnam(String nama) {
+        super(nama, 6);
+    }
+}
+
+class HewanBerkakiDelapan extends Hewan {
+    public HewanBerkakiDelapan(String nama) {
+        super(nama, 8);
+    }
+}
+
+public class Soal1 {
+    public static void main(String[] args) {
+        System.out.println("Macam-macam hewan:");
+        System.out.println("- Hewan berkaki dua");
+        System.out.println("- Hewan berkaki empat");
+        System.out.println("- Hewan berkaki enam");
+        System.out.println("- Hewan berkaki delapan");
+        System.out.println("\nContoh hewan:");
+        
+        HewanBerkakiDua kanguru = new HewanBerkakiDua("kanguru");
+        HewanBerkakiDua ayam = new HewanBerkakiDua("ayam");
+        HewanBerkakiDua bebek = new HewanBerkakiDua("bebek");
+        HewanBerkakiDua dll1 = new HewanBerkakiDua("dll");
+        System.out.println("- Hewan berkaki dua: " + kanguru.getNama() + ", " + ayam.getNama() + ", " + bebek.getNama() + ", " + dll1.getNama());
+        
+        HewanBerkakiEmpat capung = new HewanBerkakiEmpat("capung");
+        HewanBerkakiEmpat nyamuk = new HewanBerkakiEmpat("nyamuk");
+        HewanBerkakiEmpat kupu = new HewanBerkakiEmpat("kupu-kupu");
+        HewanBerkakiEmpat dll2 = new HewanBerkakiEmpat("dll");
+        System.out.println("- Hewan berkaki enam: " + capung.getNama() + ", " + nyamuk.getNama() + ", " + kupu.getNama() + ", " + dll2.getNama());
+        
+        HewanBerkakiEmpat kucing = new HewanBerkakiEmpat("kucing");
+        HewanBerkakiEmpat anjing = new HewanBerkakiEmpat("anjing");
+        HewanBerkakiEmpat kuda = new HewanBerkakiEmpat("kuda");
+        HewanBerkakiEmpat dll3 = new HewanBerkakiEmpat("dll");
+        System.out.println("- Hewan berkaki empat: " + kucing.getNama() + ", " + anjing.getNama() + ", " + kuda.getNama() + ", " + dll3.getNama());
+        
+        HewanBerkakiDelapan kepiting = new HewanBerkakiDelapan("kepiting");
+        HewanBerkakiDelapan belalang = new HewanBerkakiDelapan("belalang");
+        HewanBerkakiDelapan laba = new HewanBerkakiDelapan("laba-laba");
+        HewanBerkakiDelapan dll4 = new HewanBerkakiDelapan("dll");
+        System.out.println("- Hewan berkaki delapan: " + kepiting.getNama() + ", " + belalang.getNama() + ", " + laba.getNama() + ", " + dll4.getNama());
+    }
+}
