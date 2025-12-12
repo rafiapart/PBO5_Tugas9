@@ -1,0 +1,20 @@
+package PrakPBO;
+
+class Kubus {
+    private int sisi;
+    
+    public Kubus(int sisi) {
+        this.sisi = sisi;
+    }
+    
+    public int hitungVolume() {
+        return sisi * sisi * sisi;
+    }
+}
+
+public class Soal3 {
+    public static void main(String[] args) {
+        Kubus kubus = new Kubus(5);
+        System.out.println("Volume kubus: " + kubus.hitungVolume());
+    }
+}
