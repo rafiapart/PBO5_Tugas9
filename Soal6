@@ -1,0 +1,45 @@
+package PrakPBO;
+
+class Komik2 {
+    private String jumlahHalaman;
+    private String judul;
+    private String penulis;
+    private int waktuMain;
+    
+    public Komik2(String jumlahHalaman, String judul, String penulis) {
+        this.jumlahHalaman = jumlahHalaman;
+        this.judul = judul;
+        this.penulis = penulis;
+    }
+    
+    public void getInfoProduk() {
+        System.out.println("Komik - Judul: " + judul + ", Penulis: " + penulis + ", Halaman: " + jumlahHalaman);
+    }
+}
+
+class Games2 {
+    private String jumlahHalaman;
+    private String judul;
+    private String penulis;
+    private int waktuMain;
+    
+    public Games2(int waktuMain, String judul, String penulis) {
+        this.waktuMain = waktuMain;
+        this.judul = judul;
+        this.penulis = penulis;
+    }
+    
+    public void getInfoProduk() {
+        System.out.println("Game - Judul: " + judul + ", Penulis: " + penulis + ", Waktu Main: " + waktuMain + " jam");
+    }
+}
+
+public class Soal6 {
+    public static void main(String[] args) {
+        Komik2 komik = new Komik2("200", "One Piece", "Eiichiro Oda");
+        Games2 game = new Games2(50, "The Witcher", "CD Projekt Red");
+        
+        komik.getInfoProduk();
+        game.getInfoProduk();
+    }
+}
