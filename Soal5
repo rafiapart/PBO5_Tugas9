@@ -1,0 +1,59 @@
+package PrakPBO;
+
+class Komik {
+    private String judul;
+    private String penulis;
+    
+    public Komik(String judul, String penulis) {
+        this.judul = judul;
+        this.penulis = penulis;
+    }
+    
+    public void info() {
+        System.out.println("Komik: " + judul + " oleh " + penulis);
+    }
+}
+
+class Games {
+    private String judul;
+    private String penulis;
+    
+    public Games(String judul, String penulis) {
+        this.judul = judul;
+        this.penulis = penulis;
+    }
+    
+    public void info() {
+        System.out.println("Game: " + judul + " oleh " + penulis);
+    }
+}
+
+class Produk {
+    private String judul;
+    private String penulis;
+    
+    public Produk(String judul, String penulis) {
+        this.judul = judul;
+        this.penulis = penulis;
+    }
+    
+    public String getJudul() {
+        return judul;
+    }
+    
+    public String getPenulis() {
+        return penulis;
+    }
+}
+
+public class Soal5 {
+    public static void main(String[] args) {
+        Komik komik = new Komik("Naruto", "Masashi Kishimoto");
+        Games game = new Games("FIFA", "EA Sports");
+        Produk produk = new Produk("Harry Potter", "J.K. Rowling");
+        
+        komik.info();
+        game.info();
+        System.out.println("Produk: " + produk.getJudul() + " oleh " + produk.getPenulis());
+    }
+}
